@@ -1,0 +1,24 @@
+{
+    "name": "Mensagens Ticket",
+    "description": "Mensagens prontas de ticket",
+    "version": "1.0",
+    "manifest_version": 2,
+    "icons": {
+      "128": "favicon.png"
+    },
+    "content_scripts": [
+      {
+        "matches": [
+          "<all_urls>"
+        ],
+        "js": ["background.js"]
+      }
+    ],
+    "background" : {
+      "scripts" : ["background.js"]
+    },
+    "permissions": ["activeTab"],
+    "browser_action" : {
+
+    }
+  }
