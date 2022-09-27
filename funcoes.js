@@ -17,13 +17,15 @@ Equipe Web`;
 }
 
 function bomDiaBoaTardeBoaNoite() {
-    let userName = document.getElementsByClassName('requester-information-title ng-binding')[0].innerText;
+    let fullName = document.getElementsByClassName('requester-information-title ng-binding')[0].innerText;
+    let arrayName = fullName.split(" "); 
+    let userName = arrayName[0];
     let data = new Date();
-    let hora = data.getHours + ":" + data.getMinutes;
+    let hora = data.getHours();
 
-    if (hora >= "00:00" && hora <= "11:59") {
+    if (hora <= 11) {
         return `Bom dia, ${userName}.`;
-    } else if (hora >= "12:00" && hora <= "18:59") {
+    } else if (hora <= 18) {
         return `Boa tarde, ${userName}.`;
     } else {
         return `Boa noite, ${userName}.`;
