@@ -34,14 +34,6 @@ Em caso de dúvidas, entre em contato com nossa central de atendimento pelo emai
 Atenciosamente,
 Equipe Web`;
 
-    var mensagemFechamento = `${bomDiaBoaTardeBoaNoite()}
-
-
-
-Estamos encerrando este ticket, em caso de necessidade abra um novo em app.uff.br/atendimento
- 
-Atenciosamente,
-Equipe Web`;
 
     navigator.clipboard.writeText(mensagemSuspensao)
 
@@ -53,7 +45,21 @@ Equipe Web`;
     let caixaTextoComentario = document.querySelector("#service-request-incident-occurrence-notes-trix-comment > div > trix-editor");
     caixaTextoComentario.innerText = mensagemSuspensao;
 
-    let caixaTextoFechamento = document.querySelector("#service-request-view > div > div > div > div.service-request-wrapper > div > div > div.service-request-content.clearfix.s12 > div:nth-child(2) > div:nth-child(6) > div > fieldset > div.fechamento.ng-scope > div:nth-child(2) > div > div > citsmart-trix-editor > div > trix-editor");
-    caixaTextoFechamento.innerText = mensagemFechamento;
+    var mensagemFechamento = `<p>${bomDiaBoaTardeBoaNoite()}<br><br><br><br>Estamos encerrando este ticket, em caso de necessidade abra um novo em app.uff.br/atendimento<br><br>Atenciosamente,<br>Equipe Web</p>`;
+
+    Array.from(document.getElementsByClassName('control-label')).forEach(nos => {
+        if (nos.innerText === 'Solução Resposta*') {
+            let element = nos.parentElement.childNodes[3];
+
+            const regex = /<input type="hidden"/gm;
+
+            const str = element.children[0].innerHTML;
+            const subst = `<input type="hidden" value="${mensagemFechamento}"`;
+
+            const result = str.replace(regex, subst);
+
+            element.children[0].innerHTML = result;
+        }
+    })
 
 }
