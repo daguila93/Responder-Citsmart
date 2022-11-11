@@ -20,6 +20,7 @@ if (window.location.hostname === 'citsmart.uff.br') {
     var mensagemSuspensao = `${bomDiaBoaTardeBoaNoite()}
 
 
+Aguardamos o seu retorno.
 
 --------
 Para responder a este ticket, siga os seguintes passos:
