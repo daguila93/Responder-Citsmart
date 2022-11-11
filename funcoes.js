@@ -47,7 +47,7 @@ Equipe Web`;
     let caixaTextoComentario = document.querySelector("#service-request-incident-occurrence-notes-trix-comment > div > trix-editor");
     caixaTextoComentario.innerText = mensagemSuspensao;
 
-    var mensagemFechamento = `<p>${bomDiaBoaTardeBoaNoite()}<br><br><br><br>Estamos encerrando este ticket, em caso de necessidade abra um novo em app.uff.br/atendimento<br><br>Atenciosamente,<br>Equipe Web</p>`;
+    var mensagemFechamento = `<p>${bomDiaBoaTardeBoaNoite()}<br><br><br><br>Estamos encerrando este ticket, em caso de necessidade abra um novo em app.uff.br/atendimento .<br><br>Atenciosamente,<br>Equipe Web</p>`;
 
     Array.from(document.getElementsByClassName('control-label')).forEach(nos => {
         if (nos.innerText === 'Solução Resposta*') {
