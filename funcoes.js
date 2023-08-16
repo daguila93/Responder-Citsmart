@@ -16,6 +16,7 @@ function bomDiaBoaTardeBoaNoite() {
 
 if (window.location.hostname === 'citsmart.uff.br') {
     let numTicket = document.getElementsByClassName('description ng-binding')[0].innerText;
+    let nomeEquipe = document.getElementsByClassName("description ng-binding")[2].innerText;
 
     var mensagemSuspensao = `${bomDiaBoaTardeBoaNoite()}
 
@@ -34,7 +35,7 @@ Para responder a este ticket, siga os seguintes passos:
 Em caso de dúvidas, entre em contato com nossa central de atendimento pelo email atendimento@id.uff.br, informando o número deste ticket.
  
 Atenciosamente,
-Equipe Web`;
+Equipe ${nomeEquipe}`;
 
     var mensagemFechamento = `${bomDiaBoaTardeBoaNoite()}
 
@@ -43,7 +44,7 @@ Equipe Web`;
 Estamos encerrando este ticket, em caso de necessidade abra um novo em app.uff.br/atendimento
  
 Atenciosamente,
-Equipe Web`;
+Equipe ${nomeEquipe}`;
 
     navigator.clipboard.writeText(mensagemSuspensao)
 
