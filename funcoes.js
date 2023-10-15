@@ -14,7 +14,7 @@ function bomDiaBoaTardeBoaNoite() {
     }
 }
 
-if (window.location.hostname === 'citsmart.uff.br') {
+if (window.location.hostname === 'citsmart.uff.br' && document.readyState === 'complete') {
     let numTicket = document.getElementsByClassName('description ng-binding')[0].innerText;
     let nomeEquipe = document.getElementsByClassName("description ng-binding")[2].innerText;
 
