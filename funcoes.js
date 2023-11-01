@@ -33,7 +33,7 @@ Para responder a este ticket, siga os seguintes passos:
 5) Aperte o botão enter do teclado ou confirme a pesquisa clicando no símbolo de uma lupa (símbolo verde, presente ao lado direito da tela).
 6) No ticket ${numTicket}, procure pelo símbolo de 'Adicionar nota' (símbolo de um balão de texto) e adicione seus comentários/resposta.
 Em caso de dúvidas, entre em contato com nossa central de atendimento pelo email atendimento@id.uff.br, informando o número deste ticket.
- 
+
 Atenciosamente,
 Equipe ${nomeEquipe}`;
 
