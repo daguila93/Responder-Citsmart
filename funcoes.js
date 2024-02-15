@@ -14,6 +14,10 @@ function bomDiaBoaTardeBoaNoite() {
     }
 }
 
+if (window.location.hostname !== 'citsmart.uff.br' && document.readyState === 'complete') {
+    window.open('https://citsmart.uff.br/citsmart/pages/serviceRequestIncident/serviceRequestIncident.load#/', '_blank');
+}
+
 if (window.location.hostname === 'citsmart.uff.br' && document.readyState === 'complete') {
     let numTicket = document.getElementsByClassName('description ng-binding')[0].innerText;
     const nomeEquipeNaoMuda = ""; // Adicione o nome da sua equipe aqui, caso você não queira utilizar o nome da equipe dinamicamente.
@@ -34,7 +38,7 @@ Para responder a este ticket, siga os seguintes passos:
 5) Aperte o botão enter do teclado ou confirme a pesquisa clicando no símbolo de uma lupa (símbolo verde, presente ao lado direito da tela).
 6) No ticket ${numTicket}, procure pelo símbolo de 'Adicionar nota' (símbolo de um balão de texto) e adicione seus comentários/resposta.
 Em caso de dúvidas, entre em contato com nossa central de atendimento pelo email atendimento@id.uff.br, informando o número deste ticket.
- 
+
 Atenciosamente,
 Equipe ${nomeEquipe}`;
 
@@ -50,7 +54,6 @@ Equipe ${nomeEquipe}`;
     navigator.clipboard.writeText(mensagemSuspensao)
 
     setTimeout(() => {
-        // alert(mensagemSuspensao);
         alert('Texto copiado para a área de transferência!');
     }, 0);
 
