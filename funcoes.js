@@ -19,6 +19,7 @@ if (window.location.hostname !== 'citsmart.uff.br' && document.readyState === 'c
 }
 
 if (window.location.hostname === 'citsmart.uff.br' && document.readyState === 'complete') {
+    let operatorName = document.getElementsByClassName("cit--header-nav-item-dropdown-header-card-item-title")[0].textContent;
     let numTicket = document.getElementsByClassName('description ng-binding')[0].innerText;
     const nomeEquipeNaoMuda = ""; // Adicione o nome da sua equipe aqui, caso você não queira utilizar o nome da equipe dinamicamente.
     let nomeEquipe = nomeEquipeNaoMuda === "" ? document.getElementsByClassName("description ng-binding")[2].innerText : nomeEquipeNaoMuda;
@@ -49,6 +50,7 @@ Equipe ${nomeEquipe}`;
 Estamos encerrando este ticket, em caso de necessidade abra um novo em app.uff.br/atendimento
  
 Atenciosamente,
+${operatorName}
 Equipe ${nomeEquipe}`;
 
     navigator.clipboard.writeText(mensagemSuspensao)
